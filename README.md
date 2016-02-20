@@ -11,12 +11,19 @@
 You will need [Leiningen][lein] 2.0 or above installed.
 
 ## Running
+First, initialize your development database running:
 
-To start a web server for the application, run:
+    lein run migrate
+
+Then, to start a web server for the application, run:
 
     lein run
     
-and read the book :).
+and run tests with:
+
+    lein test
+    
+and, of course, read the [book][webdevclo] :).
 
 ## Resources
  - [Forum for the Book by the Pragmatic Bookshelf][pragma-forum]
