@@ -28,6 +28,7 @@ and, of course, read the [book][webdevclo] :).
 ## Resources
  - [Forum for the Book by the Pragmatic Bookshelf][pragma-forum]
  - [Clojurians Slack Group][clojurians] (I'm [@jan][clojurians-jan] if you wanna say hey)
+ - [Luminus - Clojure micro-framework for Web Development][luminus]
     
 ## Contributing
 
@@ -37,6 +38,7 @@ Not sure why you would want to contribute here, but, if you would like to contri
 
 Copyright © 2016 [Jan Raasch][jan]
 
+[luminus]: http://www.luminusweb.net/
 [heroku-link]: https://gaestebuch.herokuapp.com/
 [heroku-svg]: http://img.shields.io/badge/gaestebuch-onHeroku-008eb4.svg
 [travis-link]: https://travis-ci.org/janraasch/guestbook
