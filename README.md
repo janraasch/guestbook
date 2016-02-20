@@ -1,6 +1,6 @@
 # guestbook [![Build Status][travis-svg]][travis-link] [![Heroku][heroku-svg]][heroku-link]
 
-> This is [me][jan] following along the instructions of [Web Development with Clojure, 2nd Edition][webdevclo] by [Dmitri Sotnikov][dimtri].
+> This is [me][jan] following along with the instructions of [Web Development with Clojure, 2nd Edition][webdevclo] by [Dmitri Sotnikov][dimtri].
 
 ## (My) Text Editor Setup
 - Text Editor: [Atom][atom]
