@@ -11,3 +11,5 @@ profiles.clj
  .nrepl-port 
 /log
 Clojure REPL
+guestbook_dev.db.mv.*
+guestbook_test.db.mv.*
