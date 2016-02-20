@@ -3,6 +3,14 @@ language: clojure
 env:
   global:
   - DATABASE_URL='jdbc:h2:./guestbook_test.db'
-branches:
+branches: 
 only:
 - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: N8wvXyPddenZUDeVNdSZ2Igy5TM7YITvTMPhGBG3SoN/yTEJIj0Dc3jtHk4gpaj1XH10y2AtbjVL/jtxTQZ6/MpiDuSlctIt/rEb5tO/K2qEl9wn7Ssc/qFCXullCzKiM5lCpy+tlAsW4UkdcQLYoZIMb7li8El5p8VfHhBqhw2l/sSBavyxBE0i9fIWfmX3T/TkiVYOPPnIl7ZBGW7nlzzVnXshHk2qy0Ra3Mp8yG8FFWB+da9jeeukxENgG/OIjH2Af5nqE0n0ylTzHRzukKulLFBAV46BvKuGRkfbymVy0MOcOVYVfzgjB8mNQic4axZOCRO9EzkKKj+PeEsP8M4wzrjuynnh0IRueJR8A+0LTsmrG8U5ev8R9Op9D6lt1ODMKIUS4stPnhXWhECZei90611Uvoj4U686Xikg/31NYe538Ego+D992dYAJdKS1PNLitL3UGh4EB7D31jvjF/wzL0QquyS+VRXjfRH13WnckiKpIhPl1T0SWCfyeu5hBwSxCIA0cUnrXeUvXgKOw4gcUOAwclE/3iks3bVI6YyB+dq5pu7hDJwew1AfpbfvuVAmnsIAuDrCBTPpxVIfh1zKQ6agY4N0Y1DBTByz0F4QZuzh4m8Vyw1CrFdUnKk6m4hzTEuc4AADDxK/oMP52TcrlehhrGmwjcZ+y6p1Vc=
+  app: 
+    master: gaestebuch
+  on:
+    repo: janraasch/guestbook
