@@ -1,4 +1,4 @@
-# guestbook [![Build Status][travis-svg]][travis-link]
+# guestbook [![Build Status][travis-svg]][travis-link] [![Heroku][heroku-svg]][heroku-link]
 
 > This is [me][jan] following along the instructions of [Web Development with Clojure, 2nd Edition][webdevclo] by [Dmitri Sotnikov][dimtri].
 
@@ -37,6 +37,8 @@ Not sure why you would want to contribute here, but, if you would like to contri
 
 Copyright © 2016 [Jan Raasch][jan]
 
+[heroku-link]: https://gaestebuch.herokuapp.com/
+[heroku-svg]: http://img.shields.io/badge/gaestebuch-onHeroku-008eb4.svg
 [travis-link]: https://travis-ci.org/janraasch/guestbook
 [travis-svg]: https://travis-ci.org/janraasch/guestbook.svg?branch=master
 [clojurians-jan]: https://clojurians.slack.com/messages/clojure/team/jan/
