@@ -29,6 +29,9 @@ and, of course, read the [book][webdevclo] :).
  - [Forum for the Book by the Pragmatic Bookshelf][pragma-forum]
  - [Clojurians Slack Group][clojurians] (I'm [@jan][clojurians-jan] if you wanna say hey)
  - [Luminus - Clojure micro-framework for Web Development][luminus]
+ - [eastwood - a Clojure lint tool][eastwood]
+ - [kibit - There's a function for that][kibit]
+ - [bikeshed - another Clojure lint tool][bikeshed]
     
 ## Contributing
 
@@ -38,6 +41,9 @@ Not sure why you would want to contribute here, but, if you would like to contri
 
 Copyright © 2016 [Jan Raasch][jan]
 
+[bikeshed]: https://github.com/dakrone/lein-bikeshed
+[kibit]: https://github.com/jonase/kibit
+[eastwood]: https://github.com/jonase/eastwood
 [luminus]: http://www.luminusweb.net/
 [heroku-link]: https://gaestebuch.herokuapp.com/
 [heroku-svg]: http://img.shields.io/badge/gaestebuch-onHeroku-008eb4.svg
