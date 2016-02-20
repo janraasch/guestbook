@@ -1,4 +1,5 @@
-# guestbook [![Build Status][travis-svg]][travis-link] [![Heroku][heroku-svg]][heroku-link]
+# guestbook [![Build Status][travis-svg]][travis-link] [![Dependencies Status][deps-svg]][deps-link] 
+[![Heroku][heroku-svg]][heroku-link]
 
 > This is [me][jan] following along with the instructions of [Web Development with Clojure, 2nd Edition][webdevclo] by [Dmitri Sotnikov][dimtri].
 
@@ -41,6 +42,8 @@ Not sure why you would want to contribute here, but, if you would like to contri
 
 Copyright © 2016 [Jan Raasch][jan]
 
+[deps-link]: https://jarkeeper.com/janraasch/guestbook
+[deps-svg]: https://jarkeeper.com/janraasch/guestbook/status.svg
 [bikeshed]: https://github.com/dakrone/lein-bikeshed
 [kibit]: https://github.com/jonase/kibit
 [eastwood]: https://github.com/jonase/eastwood
