@@ -1,2 +1,8 @@
 sudo: false
 language: clojure
+env:
+  global:
+  - DATABASE_URL='jdbc:h2:./guestbook_test.db'
+branches:
+only:
+- master
