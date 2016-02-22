@@ -1,4 +1,4 @@
-# guestbook [![Build Status][travis-svg]][travis-link] [![Dependencies Status][deps-svg]][deps-link] 
+# guestbook [![Build Status][travis-svg]][travis-link] [![Dependencies Status][deps-svg]][deps-link]
 [![Heroku][heroku-svg]][heroku-link]
 
 > This is [me][jan] following along with the instructions of [Web Development with Clojure, 2nd Edition][webdevclo] by [Dmitri Sotnikov][dimtri].
@@ -11,20 +11,28 @@
 
 You will need [Leiningen][lein] 2.0 or above installed.
 
-## Running
+## Development
 First, initialize your development database running:
 
     lein run migrate
+    
+To compile ClojureScript once for development, run
+
+    lein cljsbuild once
+
+And, to automatically compile updates to ClojureScript files, run
+
+    lein cljsbuild auto
 
 Then, to start a web server for the application, run:
 
     lein run
-    
-and run tests with:
+
+Finally, run tests with:
 
     lein test
-    
-and, of course, read the [book][webdevclo] :).
+
+And, of course, read the [book][webdevclo] :).
 
 ## Resources
  - [Forum for the Book by the Pragmatic Bookshelf][pragma-forum]
@@ -33,7 +41,7 @@ and, of course, read the [book][webdevclo] :).
  - [eastwood - a Clojure lint tool][eastwood]
  - [kibit - There's a function for that][kibit]
  - [bikeshed - another Clojure lint tool][bikeshed]
-    
+
 ## Contributing
 
 Not sure why you would want to contribute here, but, if you would like to contribute, please do so :). In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Plus, make sure to adhere to these [commit message conventions][commit].

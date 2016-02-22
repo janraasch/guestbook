@@ -27,25 +27,55 @@
                  [com.h2database/h2 "1.4.191"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [luminus-immutant "0.1.0"]
-                 [luminus-log4j "0.1.2"]]
+                 [luminus-log4j "0.1.2"]
+                 [org.clojure/clojurescript "1.7.170" :scope "provided"]
+                 [reagent "0.5.1"]
+                 [cljs-ajax "0.5.2"]]
 
   :min-lein-version "2.0.0"
   :uberjar-name "guestbook.jar"
   :jvm-opts ["-server"]
   :source-paths ["src/clj"]
-  :resource-paths ["resources"]
+  :resource-paths ["resources" "target/cljsbuild"]
 
   :main guestbook.core
   :migratus {:store :database}
 
+  :cljsbuild
+  {:builds {:app
+             {:source-paths ["src-cljs"]
+              :compiler {:output-to "target/cljsbuild/public/js/app.js"
+                         :output-dir "target/cljsbuild/public/js/out"
+                         :main "guestbook.core"
+                         :asset-path "/js/out"
+                         :optimizations :none
+                         :source-map true
+                         :pretty-print true}}}}
+            
+
+  :clean-targets
+  ^{:protect false}
+  [:target-path
+   [:cljsbuild :builds :app :compiler :output-dir]
+   [:cljsbuild :builds :app :compiler :output-to]]
+
   :plugins [[lein-environ "1.0.1"]
-            [migratus-lein "0.2.1"]]
+            [migratus-lein "0.2.1"]
+            [lein-cljsbuild "1.1.1"]]
   :profiles
   {:uberjar {:omit-source true
              :env {:production true}
              :aot :all
              :source-paths ["env/prod/clj"]
-             :resource-paths ["env/prod/resources"]}
+             :resource-paths ["env/prod/resources"]
+             :prep-tasks ["compile" ["cljsbuild" "once" "min"]]
+             :cljsbuild {:builds {:min
+                                    {:source-paths ["src-cljs"]
+                                     :compiler {:output-to "target/cljsbuild/public/js/app.js"
+                                                :main "guestbook.core"
+                                                :optimizations :advanced
+                                                :pretty-print false}}}}}
+
    :dev           [:project/dev :profiles/dev]
    :test          [:project/test :profiles/test]
    :project/dev  {:dependencies [[prone "1.0.1"]

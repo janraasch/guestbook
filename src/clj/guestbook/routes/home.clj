@@ -1,12 +1,13 @@
 (ns guestbook.routes.home
-  (:require 
+  (:require
     [bouncer.core :as b]
     [bouncer.validators :as v]
     [guestbook.layout :as layout]
     [compojure.core :refer [defroutes GET POST]]
     [ring.util.http-response :as response]
-    [guestbook.db.core :as db]))
-    
+    [guestbook.db.core :as db]
+    [ring.util.response :refer [response status]]))
+
 (defn validate-message [params]
   (first
     (b/validate
@@ -14,27 +15,23 @@
       :name v/required
       :message [v/required [v/min-count 10]])))
 
-(defn home-page [{:keys [flash]}]
+(defn home-page []
   (layout/render
-    "home.html" 
-    (merge {:messages (db/get-messages)}
-           (select-keys flash [:name :message :errors]))))
+    "home.html"))
 
 (defn about-page []
   (layout/render "about.html"))
 
 (defn save-message! [{:keys [params]}]
   (if-let [errors (validate-message params)]
-    (-> (response/found "/")
-        (assoc :flash (assoc params :errors errors)))
+    (-> {:errors errors} response (status 400))
     (do
       (db/save-message!
         (assoc params :timestamp (java.util.Date.)))
-      (response/found "/"))))
+      (response {:status :ok}))))
 
 (defroutes home-routes
-  (GET "/" request (home-page request))
-  (POST "/message" request (save-message! request))
+  (GET "/" [] (home-page))
+  (GET "/messages" [] (response (db/get-messages)))
+  (POST "/add-message" req (save-message! req))
   (GET "/about" [] (about-page)))
-
-
