@@ -55,7 +55,6 @@
 
 (defn wrap-base [handler]
   (-> ((:middleware defaults) handler)
-      wrap-formats
       wrap-webjars
       wrap-flash
       (wrap-session {:cookie-attrs {:http-only true}})

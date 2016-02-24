@@ -2,6 +2,7 @@
   (:require [compojure.core :refer [defroutes routes wrap-routes]]
             [guestbook.layout :refer [error-page]]
             [guestbook.routes.home :refer [home-routes]]
+            [guestbook.routes.ws :refer [websocket-routes]]
             [guestbook.middleware :as middleware]
             [clojure.tools.logging :as log]
             [compojure.route :as route]
@@ -32,7 +33,10 @@
 
 (def app-routes
   (routes
-    (wrap-routes #'home-routes middleware/wrap-csrf)
+    #'websocket-routes
+    (-> #'home-routes
+      (wrap-routes middleware/wrap-csrf)
+      (wrap-routes middleware/wrap-formats))
     (route/not-found
       (:body
         (error-page {:status 404
