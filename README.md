@@ -15,7 +15,7 @@ You will need [Leiningen][lein] 2.0 or above installed.
 First, initialize your development database running:
 
     lein run migrate
-    
+
 To compile ClojureScript once for development, run
 
     lein cljsbuild once
@@ -38,6 +38,7 @@ And, of course, read the [book][webdevclo] :).
  - [Forum for the Book by the Pragmatic Bookshelf][pragma-forum]
  - [Clojurians Slack Group][clojurians] (I'm [@jan][clojurians-jan] if you wanna say hey)
  - [Luminus - Clojure micro-framework for Web Development][luminus]
+ - [Sente - Realtime web comms for Clojure/Script][sente]
  - [eastwood - a Clojure lint tool][eastwood]
  - [kibit - There's a function for that][kibit]
  - [bikeshed - another Clojure lint tool][bikeshed]
@@ -50,6 +51,7 @@ Not sure why you would want to contribute here, but, if you would like to contri
 
 Copyright © 2016 [Jan Raasch][jan]
 
+[sente]: https://github.com/ptaoussanis/sente
 [deps-link]: https://jarkeeper.com/janraasch/guestbook
 [deps-svg]: https://jarkeeper.com/janraasch/guestbook/status.svg
 [bikeshed]: https://github.com/dakrone/lein-bikeshed
