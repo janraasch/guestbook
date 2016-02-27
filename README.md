@@ -1,7 +1,9 @@
 # guestbook [![Build Status][travis-svg]][travis-link] [![Dependencies Status][deps-svg]][deps-link]
 [![Heroku][heroku-svg]][heroku-link]
 
-> This is [me][jan] following along with the instructions of [Web Development with Clojure, 2nd Edition][webdevclo] by [Dmitri Sotnikov][dimtri].
+> This is [me][jan] following along with the instructions of chapters 1-5 of [Web Development with Clojure, 2nd Edition][webdevclo] by [Dmitri Sotnikov][dimtri].
+
+For my work on chapter 6 see https://github.com/janraasch/catpics.
 
 ## (My) Text Editor Setup
 - Text Editor: [Atom][atom]
