@@ -4,8 +4,8 @@ env:
   global:
   - DATABASE_URL='jdbc:h2:./guestbook_test.db'
 branches: 
-only:
-- master
+  only:
+  - master
 deploy:
   provider: heroku
   api_key:
