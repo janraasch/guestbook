@@ -43,10 +43,11 @@ And, of course, read the [book][webdevclo] :).
  - [kibit - There's a function for that][kibit]
  
 ## Other Chapters
-  - Chapter 1-5, see https://github.com/janraasch/guestbook.
-  - Chapter 6, see https://github.com/janraasch/catpics.
-  - 1st part of chapter 7, see https://github.com/janraasch/clojure-db-examples.
-  - 2nd part of chapter 7, see https://github.com/janraasch/employeezies.
+ - Chapter 1-5, see https://github.com/janraasch/guestbook.
+ - Chapter 6, see https://github.com/janraasch/catpics.
+ - 1st part of chapter 7, see https://github.com/janraasch/clojure-db-examples.
+ - 2nd part of chapter 7, see https://github.com/janraasch/employeezies.
+ - Chapters 8 and 9, see https://github.com/janraasch/picture-gallery.
 
 ## Contributing
 
